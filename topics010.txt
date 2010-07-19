@@ -1,0 +1,92 @@
+topic 000
+   year
+   new
+   market
+   percent
+   prices
+   million
+   stock
+   last
+   oil
+   people
+   today
+   trade
+   billion
+   dollar
+   rose
+   two
+   reported
+   police
+   late
+   sales
+
+
+topic 001
+   percent
+   million
+   billion
+   new
+   years
+   people
+   company
+   federal
+   i
+   department
+   year
+   officials
+   last
+   business
+   bill
+   state
+   corp
+   report
+   first
+   school
+
+
+topic 002
+   i
+   people
+   police
+   two
+   years
+   time
+   three
+   last
+   first
+   new
+   home
+   year
+   war
+   told
+   east
+   day
+   world
+   just
+   yearold
+   south
+
+
+topic 003
+   president
+   soviet
+   bush
+   states
+   government
+   united
+   new
+   party
+   state
+   court
+   officials
+   union
+   political
+   two
+   house
+   committee
+   dukakis
+   told
+   campaign
+   members
+
+

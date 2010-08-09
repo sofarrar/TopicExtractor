@@ -1,0 +1,20 @@
+1. Call Preprocessor with the topic as parameter
+
+javac Preprocessor.java
+java Preprocessor $@
+
+e.g. java Preprocessor 孩子
+
+2. Call findZHchar.py to find chinese charcters in documents
+./findZHchar.py
+
+3. Call createData which will create input data 
+which are required for lda
+./createData.py
+
+4. Finally call lda.sh
+You can change the parameters as you like.
+./lda.sh
+
+5. Check the result in /results
+topic_zh.txt

@@ -1,5 +1,6 @@
-#!/bin.bash
-./lib/lda est 10 4 settings.txt ../ap/ap.dat random temp
-#./lda inf inf-settings.txt ../ap/ap.dat temp
-./lib/topics.py ./lib/temp/010.beta ./lib/ap/vocab.txt 20 > ./output/topics010.txt
-
+#!/bin/bash
+# alpha is the base 
+# k is number of topics
+./lib/lda-c-dist/lda est 10 20 ./lib/lda-c-dist/settings.txt ./src/topic_zh.dat random temp
+#./lib/lda-c-dist/lda inf ./lib/lda-c-dist/inf-settings.txt ./temp/final ./src/topic_zh.dat topic_zh
+./lib/lda-c-dist/topics.py ./temp/final.beta ./src/vocab.txt 20 > ./results/topic_zh.txt

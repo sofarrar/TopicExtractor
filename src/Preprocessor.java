@@ -157,7 +157,7 @@ class Preprocessor
                String content = childNodes.item(j).getTextContent();
 
                try {
-                 PrintStream out = new PrintStream("prep.txt","UTF-8");
+                 PrintStream out = new PrintStream("../output/prep.txt","UTF-8");
                  System.setOut(out);
                  builder.append(fieldName + ": " + content);
                  builder.append("\n");

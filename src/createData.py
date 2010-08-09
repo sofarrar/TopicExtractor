@@ -1,15 +1,13 @@
 #!/usr/bin/env python2.6
 # -*- encoding: utf8 -*-
 
-import re, codecs, os,sys
+import re,codecs,os,sys,subprocess
 
 # open UTF-8 files
-input = codecs.open("prepout.txt.seg","r","utf-8")
-vocabout = open("vocab.txt","w")
-dataout = open("topic_zh.dat","w") 
 stopwords = codecs.open("stopwords.txt","r","utf-8")
-stopout = open ("stopout.txt","w")
-stopin = codecs.open("stopout.txt.seg","r","utf-8")
+vocabout = open("../output/vocab.txt","w")
+dataout = open("../output/topic_zh.dat","w") 
+stopout = open ("../output/stopout.txt","w")
 #log = open("log.txt","w")
 
 #vocabout.write(codecs.BOM_UTF8)
@@ -24,14 +22,14 @@ for l in lines:
     stopout.write(word.encode("utf-8") + ' ')
 stopout.close()
 
-# segement chinese words
-command = './segmenter.sh stopout.txt'
-l = os.popen(command)
+# segement stop words
+l = subprocess.call(["./segmenter.sh", "../output/stopout.txt"])
 
-command = './segmenter.sh prepout.txt'
-l = os.popen(command)
+# segement output
+l = subprocess.call(["./segmenter.sh", "../output/prepout.txt"])
 
 # create stopwords dictionary
+stopin = codecs.open("../output/stopout.txt.seg","r","utf-8")
 stopdict = {}
 lines = stopin.readlines()
 for l in lines:
@@ -43,6 +41,7 @@ for l in lines:
         #log.write(w.encode("utf-8") + '\n')
   
 # create vocab.txt
+input = codecs.open("../output/prepout.txt.seg","r","utf-8")
 dict = {} 
 lines = input.readlines()
 for l in lines: 

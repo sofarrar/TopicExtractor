@@ -4,8 +4,8 @@
 import re, codecs
 
 # open UTF-8 files
-input = codecs.open("prep.txt","r","utf-8")
-output = open("prepout.txt","w")
+input = codecs.open("../output/prep.txt","r","utf-8")
+output = open("../output/prepout.txt","w")
 output.write(codecs.BOM_UTF8)
 
 # find chinese characters

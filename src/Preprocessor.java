@@ -21,7 +21,6 @@ class Preprocessor
     // global constant variable 
     private static final String AppId = "4BD643DA5B78E9D533191799C97619734F41CEAE";
     private static final String requestString = "http://api.search.live.net/xml.aspx?";
-    private static final String webCount = "50";
 
 
     /* *
@@ -34,8 +33,10 @@ class Preprocessor
       // first parameter; search topic
       String queryString = args[0];
 
+      String webCount = args[1];
+
       // Build the request.
-      String requestURL = BuildRequest(queryString);
+      String requestURL = BuildRequest(queryString, webCount);
 
       // Send the request to the Live Search Service and get the response.
       Document doc = GetResponse(requestURL);
@@ -51,7 +52,7 @@ class Preprocessor
      * Build Request 
      * @param queryString
      */
-    private static String BuildRequest(String queryString) {
+    private static String BuildRequest(String queryString, String webCount) {
 
       String request = requestString
       // Required request fields 
@@ -139,7 +140,7 @@ class Preprocessor
       // Display the results header.
      System.out.println("Live Search API Version " + version);
      System.out.println("Web results for " + st);
-     System.out.println("Displaying " + (offset+1) + " to " + (offset + results.getLength()) + " of " + total + " results ");
+     System.out.println("Displaying " + (offset+1) + " to " + (offset + results.getLength()) + " of " + total + " results to prep.txt");
      System.out.println();
 
      StringBuilder builder = new StringBuilder();

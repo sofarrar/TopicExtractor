@@ -6,7 +6,7 @@ import re, codecs
 # open UTF-8 files
 input = codecs.open("../output/prep.txt","r","utf-8")
 output = open("../output/prepout.txt","w")
-output.write(codecs.BOM_UTF8)
+#output.write(codecs.BOM_UTF8)
 
 # find chinese characters
 pat =  re.compile(ur'[\u4e00-\u9fff]+')

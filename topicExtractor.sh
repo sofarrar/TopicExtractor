@@ -4,8 +4,8 @@
 # e.g. java Preprocessor "北京 三里屯" 10
 
 cd src
-javac Preprocessor.java
-java Preprocessor ${1+"$@"} $2
+javac -classpath .:../lib/javax-mail-1.3.jar Preprocessor.java
+java -classpath .:../lib/javax-mail-1.3.jar Preprocessor ${1+"$@"} $2
 
 # 2. Call findZHchar.py to find chinese charcters in documents
 ./findZHchar.py
